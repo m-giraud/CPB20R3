@@ -1,0 +1,34 @@
+# build system clutter
+build-*
+
+# auto-saved files
+*~
+
+# hidden files
+.cproject
+.project
+
+# latex clutter
+*.pdf
+*.aux
+*.blg
+*.log
+*.bbl
+*.dvi
+*.idx
+*.out
+*.tdo
+*.toc
+
+# something python related
+*.pyc
+__pycache__
+
+# shared libraries
+*.so
+
+# CMake
+*.cmake
+CMakeFiles
+Makefile
+CMakeCache.txt
