@@ -1,0 +1,8 @@
+add_subdirectory(pointsources)
+add_subdirectory(incompressible)
+add_subdirectory(compressible)
+add_subdirectory(periodicbc)
+add_subdirectory(fracture2d3d)
+add_subdirectory(isothermal)
+add_subdirectory(nonisothermal)
+add_subdirectory(network1d3d)

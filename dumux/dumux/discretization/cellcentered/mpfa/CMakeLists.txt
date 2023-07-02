@@ -1,0 +1,26 @@
+add_subdirectory(omethod)
+
+install(FILES
+computetransmissibility.hh
+connectivitymap.hh
+dualgridindexset.hh
+elementfluxvariablescache.hh
+elementvolumevariables.hh
+fluxvariablescachefiller.hh
+fvelementgeometry.hh
+fvgridgeometry.hh
+fvgridgeometrytraits.hh
+gridfluxvariablescache.hh
+gridinteractionvolumeindexsets.hh
+gridvolumevariables.hh
+helper.hh
+interactionvolumebase.hh
+interactionvolumedatahandle.hh
+localassemblerbase.hh
+localassemblerhelper.hh
+localfacedata.hh
+methods.hh
+scvgradients.hh
+subcontrolvolumeface.hh
+tensorlambdafactory.hh
+DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/dumux/discretization/cellcentered/mpfa)

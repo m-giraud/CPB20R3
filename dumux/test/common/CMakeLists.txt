@@ -1,0 +1,10 @@
+add_subdirectory(boundingboxtree)
+add_subdirectory(geometry)
+add_subdirectory(math)
+add_subdirectory(parameters)
+add_subdirectory(propertysystem)
+add_subdirectory(spline)
+add_subdirectory(timeloop)
+add_subdirectory(typetraits)
+
+dumux_add_test(SOURCES test_partial.cc)

@@ -1,0 +1,114 @@
+/*!
+ *\file
+ *\ingroup Parameter
+ *
+ *\brief List of currently useable run-time parameters
+ *
+ * The listed run-time parameters are in general available,
+ * but we point out that a certain model might not be able
+ * to use every parameter!
+ *
+ * | Group       | Parameter    | Type       | Default Value     | Explanation |
+ * | :-         | :-            | :-         | :-                | :-          |
+ * | -          | ParameterFile | std::string| executable.input  | name of the parameter file |
+ * | \b Component | GasDensity | Scalar | 1.0 | |
+ * |  | GasDiffusionCoefficient | Scalar | 1.0 | |
+ * |  | GasKinematicViscosity | Scalar | 1.0 | |
+ * |  | HenryComponentInWater | Scalar | 1.0 | |
+ * |  | HenryWaterInComponent | Scalar | 1.0 | |
+ * |  | LiquidDensity | Scalar | 1.0 | |
+ * |  | LiquidDiffusionCoefficient | Scalar | 1.0 | |
+ * |  | LiquidKinematicViscosity | Scalar | 1.0 | |
+ * |  | MolarMass | Scalar | 1.0 | |
+ * |  | Name | std::string | component | |
+ * | \b ElectroChemistry | ActivationBarrier | Scalar | | |
+ * |  | CellVoltage | Scalar | | |
+ * |  | MaxIterations | Scalar | | |
+ * |  | NumElectrons | Scalar | | |
+ * |  | pO2Inlet | Scalar | | |
+ * |  | RefCurrentDensity | Scalar | | |
+ * |  | RefO2PartialPressure | Scalar | | |
+ * |  | RefTemperature | Scalar | | |
+ * |  | ReversibleVoltage | Scalar | | |
+ * |  | SpecificResistance | Scalar | | |
+ * |  | SurfaceIncreasingFactor | Scalar | | |
+ * |  | ThermoneutralVoltage | Scalar | | |
+ * |  | TransferCoefficient | Scalar | | |
+ * |  | TransportNumberH20 | Scalar | | |
+ * | \b Grid | Angular+std::to_string(i) | Scalar | | |
+ * |  | Axial+std::to_string(i) | Scalar | | |
+ * |  | BoundarySegments | bool | false | |
+ * |  | Cells | CellArray | cells | |
+ * |  | Cells | GlobalPosition | | |
+ * |  | Cells | int | 1 | |
+ * |  | Cells | intdim | cells | |
+ * |  | Cellsstd::array< | | | |
+ * |  | Cells+std::to_string(i) | int | cells[i] | |
+ * |  | CellType | std::string | Cube | |
+ * |  | ClosureType | std::string | Green | |
+ * |  | Coordinates | std::vector<typenameGrid::ctype> | | |
+ * |  | DomainMarkers | bool | false | |
+ * |  | File | std::string | | |
+ * |  | File | std::string | modelParamGroup | |
+ * |  | Grading+std::to_string(i) | Scalar | grading[i] | |
+ * |  | Grading+std::to_string(i) | std::vector<ctype> | grading[i] | |
+ * |  | HeapSize | int | | |
+ * |  | KeepPhysicalOverlap | bool | true | |
+ * |  | LeftBoundary | CoordinateType | 0.0 | |
+ * |  | LowerLeft | GlobalPosition | GlobalPosition(0.0) | |
+ * |  | Overlap | int | 1 | |
+ * |  | Partitioning | intdim | | |
+ * |  | Periodicstd::bitset<dim | | | |
+ * |  | Positions+std::to_string(i) | std::vector<ctype> | | |
+ * |  | Radial+std::to_string(i) | Scalar | | |
+ * |  | Refinement | int | | |
+ * |  | RefinementType | std::string | Local | |
+ * |  | RightBoundary | CoordinateType | | |
+ * |  | UpperRight | Dune::FieldVector<ctdim> | | |
+ * |  | UpperRight | GlobalPosition | | |
+ * |  | UpperRight | GlobalPosition | GlobalPosition(0.0) | |
+ * |  | Verbosity | bool | false | |
+ * |  | WellRadius | Scalar | | |
+ * | \b Impet | ErrorTermFactor | Scalar | GET_PROP_VALUE(TypeTagImpetErrorTermFactor) | |
+ * |  | ErrorTermLowerBound | Scalar | GET_PROP_VALUE(TypeTagImpetErrorTermLowerBound) | |
+ * |  | ErrorTermUpperBound | Scalar | GET_PROP_VALUE(TypeTagImpetErrorTermUpperBound) | |
+ * | \b Implicit | NumericDifferenceMethod | int | | |
+ * |  | UpwindWeight | Scalar | | |
+ * | \b LinearSolver | GMResRestart | double | | |
+ * |  | GMResRestart | int | | |
+ * |  | MaxIterations | int | | |
+ * |  | PreconditionerIterations | int | | |
+ * |  | PreconditionerRelaxation | Scalar | | |
+ * |  | ResidualReduction | Scalar | | |
+ * |  | ResidualReduction | Scalar | 1e-6 | |
+ * |  | Verbosity | int | | |
+ * | \b Mpfa | Q | Scalar | | |
+ * | \b Newton | EnableAbsoluteResidualCriterion | bool | | |
+ * |  | EnableChop | bool | | |
+ * |  | EnableResidualCriterion | bool | | |
+ * |  | EnableShiftCriterion | bool | | |
+ * |  | MaxAbsoluteResidual | Scalar | | |
+ * |  | MaxRelativeShift | Scalar | | |
+ * |  | MaxSteps | int | | |
+ * |  | ResidualReduction | Scalar | | |
+ * |  | SatisfyResidualAndShiftCriterion | bool | | |
+ * |  | TargetSteps | int | | |
+ * |  | UseLineSearch | bool | | |
+ * | \b Problem | AddVelocity | bool | | |
+ * |  | EnableGravity | bool | | |
+ * |  | Name | std::string | | |
+ * |  | Salinity | Scalar | 1e-3 | |
+ * |  | UsePrimaryVariableSwitch | bool | | |
+ * | \b SpatialParams | ForchCoeff | Scalar | 0.55 | |
+ * |  | Tortuosity | Scalar | 0.5 | |
+ * | \b TimeLoop | Restart | double | | |
+ * | \b TimeManager | DtInitial | Scalar | | |
+ * |  | MaxTimeStepSizestd::numeric_limits<Scalar> | | | |
+ * |  | Restart | Scalar | | |
+ * |  | TEnd | double | | |
+ * |  | TEnd | Scalar | | |
+ * | \b Vtk | AddProcessRank | bool | | |
+ * |  | AddVelocity | bool | | |
+ * |  | OutputLevel | int | | |
+ * |  | WriteFaceData | bool | false | |
+ */

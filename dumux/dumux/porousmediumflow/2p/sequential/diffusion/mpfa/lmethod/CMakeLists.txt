@@ -1,0 +1,22 @@
+install(FILES
+2dpressure.hh
+2dpressureadaptive.hh
+2dpressureproperties.hh
+2dpressurepropertiesadaptive.hh
+2dpressurevelocity.hh
+2dpressurevelocityadaptive.hh
+2dtransmissibilitycalculator.hh
+2dvelocity.hh
+2dvelocityadaptive.hh
+3dinteractionvolumecontainer.hh
+3dinteractionvolumecontaineradaptive.hh
+3dpressure.hh
+3dpressureadaptive.hh
+3dpressureproperties.hh
+3dpressurepropertiesadaptive.hh
+3dpressurevelocity.hh
+3dpressurevelocityadaptive.hh
+3dtransmissibilitycalculator.hh
+3dvelocity.hh
+3dvelocityadaptive.hh
+DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/dumux/porousmediumflow/2p/sequential/diffusion/mpfa/lmethod)

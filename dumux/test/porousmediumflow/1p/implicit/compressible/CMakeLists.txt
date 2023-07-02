@@ -1,0 +1,2 @@
+add_subdirectory(stationary)
+add_subdirectory(instationary)
