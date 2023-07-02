@@ -1,0 +1,11 @@
+################################
+# Dune module information file #
+################################
+
+#Name of the module
+Module: dune-foamgrid
+Version: 2.6-git
+Maintainer: timo.koch@iws.uni-stuttgart.de, oliver.sander@tu-dresden.de
+#depending on
+Depends: dune-common (>= 2.5) dune-geometry (>= 2.5) dune-grid (>= 2.5)
+Suggests: dune-python

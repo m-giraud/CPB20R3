@@ -1,0 +1,26 @@
+- Test: does indexInInside for codim0-coupling always return 0?
+- GridGlueVTKWriter doesn't seem to work
+- GridGlueVTKWriter crashes when started on an empty GridGlue
+
+For the upcoming paper:
+./ remove target/domain naming
+./ remove extractortraits
+- rename Extractor to Patch
+./ Extractor/Patch should get the predicate
+./ remove remoteintersection(iterator)impl CRTP magic
+(./) implement _new_ parallel merging (see article.tex)
+./ move gridglue/adapter/gridglue.hh to gridglue/gridglue.hh
+- add directed version communicate<FROM,TO, DH,DT>(data,iftype,dir)
+   ... or similar
+./ implement IndexSet
+
+Interface changes:
+- Merger gets (CoordType, dimG1, dimG2, dimworld, mergedDim) template parameters
+- Merger::build(Range<CoordG1> verticesG1,
+                Range<ExtractedEntityG1> entitiesG1,
+                Range<CoordG2> verticesG2,
+                Range<ExtractedEntityG2> entitiesG2)
+- ExtractedEntity (name to be discussed) provides:
+  * list of vertexIds
+  * Dune::GeometryType
+- Range describes begin and end iterator

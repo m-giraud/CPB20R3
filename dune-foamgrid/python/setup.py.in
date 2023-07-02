@@ -1,0 +1,10 @@
+from setuptools import setup
+
+setup(
+    name = 'dune.foamgrid',
+    namespace_packages = ['dune'],
+    version = '${DUNE_FOAMGRID_VERSION}',
+    packages = ['dune.foamgrid'],
+    zip_safe = False,
+    package_data = {'': ['*.so']},
+)

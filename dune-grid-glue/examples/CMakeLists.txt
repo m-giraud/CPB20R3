@@ -1,0 +1,2 @@
+add_executable(contactmerge contactmerge.cc)
+target_link_dune_default_libraries(contactmerge)

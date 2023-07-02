@@ -1,0 +1,12 @@
+INPUT                  += @top_srcdir@/dune/grid-glue/gridglue.hh \
+                         @top_srcdir@/dune/grid-glue/adapter \
+                         @top_srcdir@/dune/grid-glue/common \
+                         @top_srcdir@/dune/grid-glue/extractors \
+                         @top_srcdir@/dune/grid-glue/merging
+EXCLUDE                +=
+EXAMPLE_PATH           +=
+EXAMPLE_PATTERNS       += *.dgf
+IMAGE_PATH             +=
+PREDEFINED             += DOXYGEN \
+                         HAVE_MPI:=1 \
+                         "DUNE_DEPRECATED:=/** \deprecated */"
